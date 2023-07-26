@@ -1,17 +1,22 @@
-// this is the javascript for the guessgame javascript.
+function calcualte (num1 , numb2 , operator){
+    switch (operator){
+        case '+' :
+            return num1 + numb2
+        case '-':
+            return num1 - numb2;
+        case '*':
+             return num1 * numb2;
+        case '/':
+            if (num2 != 0){
+            return num1/num2;
+            }else {
+                return 'error : unknown operator,';
+            }
+    }
+}
 
 $(document).ready(function() {
-    var numberToGuess = Math.floor(Math.random() * 10) + 1;
-
-    $('#checkGuess').click(function() {
-        var userGuess = $('#guess').val();
-
-        if (userGuess == numberToGuess) {
-            $('body').css('background-color', 'lightgreen');
-            $('#result').text('Congrats! You guessed the number.');
-        } else {
-            $('body').css('background-color', 'red');
-            $('#result').text('Sorry, try again.');
-        }
+    $("#myButton").click(function() {
+    alert("Button clicked!");
     });
-});
+    });
